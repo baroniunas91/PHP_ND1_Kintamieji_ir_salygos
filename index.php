@@ -536,3 +536,50 @@ echo 'Išrūšiuota nuo didžiausio iki mažiausio:';
 echo '<br>';
 echo "$didziausias $antrasDidziausias $trečiasDidziausias $trečiasMaziausias $antrasMaziausias $maziausias";
 echo '<br>';
+// Kintamūjų kintamieji
+echo '<br>';
+echo '11b) -------------------------------------------';
+echo '<br>';
+
+$num1 = rand(1000, 9999) . 'num1';
+$num2 = rand(1000, 9999) . 'num2';
+$num3 = rand(1000, 9999) . 'num3';
+$num4 = rand(1000, 9999) . 'num4';
+$num5 = rand(1000, 9999) . 'num5';
+$num6 = rand(1000, 9999) . 'num6';
+
+$string = '';
+
+// kintamasis, negali prasidėti skaičiumi todėl _
+${'_'.$num1} = 'num1';
+${'_'.$num2} = 'num2';
+${'_'.$num3} = 'num3';
+${'_'.$num4} = 'num4';
+${'_'.$num5} = 'num5';
+${'_'.$num6} = 'num6';
+
+$max =  max($num1, $num2, $num3, $num4, $num5, $num6);
+$string .= (integer)$max;
+$${'_'.$max} = 0;
+
+$max =  max($num1, $num2, $num3, $num4, $num5, $num6);
+$string .= ' ' . (integer)$max;
+$${'_'.$max} = 0;
+
+$max =  max($num1, $num2, $num3, $num4, $num5, $num6);
+$string .= ' ' . (integer)$max;
+$${'_'.$max} = 0;
+
+$max =  max($num1, $num2, $num3, $num4, $num5, $num6);
+$string .= ' ' . (integer)$max;
+$${'_'.$max} = 0;
+
+$max =  max($num1, $num2, $num3, $num4, $num5, $num6);
+$string .= ' ' . (integer)$max;
+$${'_'.$max} = 0;
+
+$max =  max($num1, $num2, $num3, $num4, $num5, $num6);
+$string .= ' ' . (integer)$max;
+$${'_'.$max} = 0;
+
+echo $string;
